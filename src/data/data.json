@@ -1,0 +1,356 @@
+{
+    "resources": [
+        {
+            "title": "Find me on Mastodon",
+            "link": "https://indieweb.social/@kendalmintcode",
+            "imageUrl": "https://i.pinimg.com/736x/dd/d2/50/ddd250b4b6735479679fd1b2ee58c985.jpg"
+        },
+        {
+            "title": "Welcome to Ark Labs",
+            "link": "https://ark-labs.co.uk",
+            "imageUrl": "https://hpmusic.vn/wp-content/uploads/2020/11/IMG_2452.jpg"
+        },
+        {
+            "title": "Some sort of third title",
+            "link": "https://indieweb.social/@kendalmintcode",
+            "imageUrl": "https://vietthuongshop.vn/image/catalog/steinway-sons-a-188.jpg"
+        },
+        {
+            "title": "Super item number the last",
+            "link": "https://indieweb.social/@kendalmintcode",
+            "imageUrl": "https://nhaccutienmanh.vn/wp-content/uploads/2020/03/dan-piano-casio-cac-loai.jpg"
+        },
+        {
+            "title": "Find me on Mastodon",
+            "link": "https://indieweb.social/@kendalmintcode",
+            "imageUrl": "https://i.pinimg.com/736x/dd/d2/50/ddd250b4b6735479679fd1b2ee58c985.jpg"
+        },
+        {
+            "title": "Welcome to Ark Labs",
+            "link": "https://ark-labs.co.uk",
+            "imageUrl": "https://hpmusic.vn/wp-content/uploads/2020/11/IMG_2452.jpg"
+        },
+        {
+            "title": "Some sort of third title",
+            "link": "https://indieweb.social/@kendalmintcode",
+            "imageUrl": "https://vietthuongshop.vn/image/catalog/steinway-sons-a-188.jpg"
+        },
+        {
+            "title": "Super item number the last",
+            "link": "https://indieweb.social/@kendalmintcode",
+            "imageUrl": "https://nhaccutienmanh.vn/wp-content/uploads/2020/03/dan-piano-casio-cac-loai.jpg"
+        },
+        {
+            "title": "Find me on Mastodon",
+            "link": "https://indieweb.social/@kendalmintcode",
+            "imageUrl": "https://i.pinimg.com/736x/dd/d2/50/ddd250b4b6735479679fd1b2ee58c985.jpg"
+        },
+        {
+            "title": "Welcome to Ark Labs",
+            "link": "https://ark-labs.co.uk",
+            "imageUrl": "https://hpmusic.vn/wp-content/uploads/2020/11/IMG_2452.jpg"
+        },
+        {
+            "title": "Some sort of third title",
+            "link": "https://indieweb.social/@kendalmintcode",
+            "imageUrl": "https://vietthuongshop.vn/image/catalog/steinway-sons-a-188.jpg"
+        },
+        {
+            "title": "Super item number the last",
+            "link": "https://indieweb.social/@kendalmintcode",
+            "imageUrl": "https://nhaccutienmanh.vn/wp-content/uploads/2020/03/dan-piano-casio-cac-loai.jpg"
+        }
+    ],
+
+    "product": [
+        {
+            "id": 0,
+            "type": "Guitar",
+            "name": "Đàn Guitar Acoustic Rosen G13NA Màu Vàng Gỗ Tự Nhiên ( Solid Top) - Âm Thanh Tốt",
+            "price": 2300000,
+            "brand": "Rosen",
+            "Origin": "Trung Quốc",
+            "Material": "Gỗ nhập khẩu chất lượng cao",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/92/03/b2/c81c4ef2eb087f05d55e6df9adae5023.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/ef/0e/24/69dc477a2f254389bee4bdd56dabd130.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/dc/29/e2/3507e6e471567e005f749b96af7f9cb0.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/87/42/04/d4f1e53fd0a0a4accfa33350f1c33828.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 1,
+            "type": "Guitar",
+            "name": "Đàn Guitar Acoustic Rosen G11-40BK (Gỗ Thịt - Solid top)",
+            "price": 1690000,
+            "brand": "Rosen",
+            "Origin": "Trung Quốc",
+            "Material": "Gỗ thông Nguyên Miếng (Solid Sitka spruce)",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/c3/e6/94/3f3cf7d8d6ad7ba6d53d33e9d2dd7596.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/c6/82/73/91b330fca8ab022d046c1c5d9b969dfc.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/aa/b2/75/989d33f62839038895d85d0e1ba27035.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/dd/24/33/ece82e379e9553c0daa72d93ece7eb37.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 2,
+            "type": "Piano",
+            "name": "Đàn Piano điện cao cấp/ Home Digital Piano - Kzm Kurtzman KS1 (RW) - Dáng Upright - Màu gỗ tự nhiên (Rosewood) - Hàng chính hãng",
+            "price": 10900000,
+            "brand": "Kzm Kurtzman",
+            "Origin": "Anh",
+            "Material": "Gỗ cao cấp",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/a4/57/aa/fdc48bdbfa952164e9c71a082927e071.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/b2/49/9e/216a9c0f2c3c893d9651da2490f8364a.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/42/c0/51/62e6d28ba800078ab1ba11e16420cded.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/92/bd/74/76fdff9fa85a538f4de375c023aa45cc.png.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 3,
+            "type": "Piano",
+            "name": "Đàn Piano điện tử YAMAHA P-125A kèm chân pedal",
+            "price": 18610500,
+            "brand": "Yamaha",
+            "Origin": "Nhật Bản",
+            "Material": "Gỗ",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/be/bb/2c/0845b710b2b5a4fc88845ee1465b2a24.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/55/a7/0b/0495807d6dc08876686edaf62f98695c.jpeg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/ec/ac/31/ee586463fa67c8e8f4cdb7690ad80291.jpeg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/48/8d/50/ec6ea96aee208f0fee0952ce3645add6.jpeg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 4,
+            "type": "Organ",
+            "name": "Đàn Organ điện tử/ Portable Keyboard - Kzm Kurtzman K200 - Perfect Starter keyboard - Màu đen (BL) - Hàng chính hãng",
+            "price": 3485000,
+            "brand": "Kzm Kurtzman",
+            "Origin": "Anh",
+            "Material": "Nhựa plastic, kim loại cao cấp - không độc hại, bền đẹp qua nhiều thời gian sử dụng.",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/20/12/03/c3fe441f7c478b99b7286a42c2d2aad6.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/db/5d/62/77d3c3d7eb40ccf767910831fa9c49d5.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/67/fc/e8/0f6a210a5007180950577b0ad6212a46.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/63/05/37/84d90d2af8d084a7800897ce46fa318a.png.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 5,
+            "type": "Organ",
+            "name": "Đàn Organ điện tử (Keyboard) YAMAHA cho bé PSS-E30 với nhiều hiệu ứng âm thanh, phù hợp cho trẻ em dưới 6 tuổi",
+            "price": 1690000,
+            "brand": "Yamaha",
+            "Origin": "Nhật Bản",
+            "Material": "Nhựa plastic",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/6a/47/e9/165a296f6e73ac5da4f138d026208cf1.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/63/99/25/9126c4e2cb4b373faa23f4fb1a33354a.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/22/95/89/694a9e879aa27e8bacd3789f6a21e6df.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/3a/da/7e/8f4c5be06c90f5a4abfa3b64882ace04.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 6,
+            "type": "Sáo trúc",
+            "name": "Sáo trúc tập chơi tone Fa F4 HL10 hệ 6 lỗ cho tất cả mọi người đam mê",
+            "price": 100000,
+            "brand": "OEM",
+            "Origin": "Việt Nam",
+            "Material": "nứa",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/3f/1e/d7/84d2c0cac71bcee7c547b54def0a0b73.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/58/d4/bb/d3d1f288c8932c751922ce6a2f3e979e.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/0a/84/a3/208630f10eeab8015771d1b44118192d.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/cd/00/cb/51b1785fbf4efe0c92482d5ca63ed12e.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 7,
+            "type": "Sáo trúc",
+            "name": "SÁO ĐỘNG TIÊU TRÚC HUN KHÓI D4. TIÊU BÁT KHỔNG CHÂT LƯỢNG",
+            "price": 200000,
+            "brand": "OEM",
+            "Origin": "Việt Nam",
+            "Material": "Động tiêu trúc hun khói",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/ae/0a/2c/73d172ae55068d4594bf42cb8c14598d.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/a7/44/a6/e3b4364cca8e2f632f61c33ff38c3355.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/66/c4/c4/31bf8ad0e28fe34ba5eb362bc8749362.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/7c/f5/31/78a99b491a10f8c168500878067b6366.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 8,
+            "type": "Guitar",
+            "name": "Đàn Guitar Acoustic Việt Nam GA-10EV Mặt Gỗ Thông Nguyên Tấm Cao Cấp",
+            "price": 959000,
+            "brand": "OEM",
+            "Origin": "Việt Nam",
+            "Material": "Gỗ Thông",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/91/65/54/6311ac6703a212d55593f0db1d9ee36c.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/97/57/36/f122f2bb4ae6af86ddb14887e71ec772.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/59/15/33/7d4467427d923f097c54803ecdc20695.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/5b/c9/5c/5ec278ee4d70b85bd1332db1b9dc2312.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 9,
+            "type": "Guitar",
+            "name": "Đàn Guitar Classic/ Classical & Nylon - Yamaha CG-TA (CGTA) - TA Series (Trans Acoustic) - Màu gỗ tự nhiên",
+            "price": 16000000,
+            "brand": "Yamaha",
+            "Origin": "Nhật Bản",
+            "Material": "gỗ ovangko",
+            "promotion": false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/77/6d/a1/24f5046d4befa867623279eaf54a3ae4.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/88/90/f0/04191df40b1483584f0b6f125c7633fc.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/4d/a9/e9/064c44525ce51eddde66c18fbcb2d5af.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/af/6d/4e/50a607861dcca4597e49820b9fc62a18.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 10,
+            "type": "Guitar",
+            "name": "Đàn Guitar Classic Yamaha CG182S (Chính Hãng)",
+            "price": 12000000,
+            "brand": "Yamaha",
+            "Origin": "Nhật Bản",
+            "Material": "Gỗ vân sam nguyên tấm",
+            "promotion":false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/d6/d0/a5/0e936a39f126f842d9a9bdbc1679e06b.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/d6/d0/a5/0e936a39f126f842d9a9bdbc1679e06b.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/d6/d0/a5/0e936a39f126f842d9a9bdbc1679e06b.png.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/d6/d0/a5/0e936a39f126f842d9a9bdbc1679e06b.png.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 11,
+            "type":"Guitar",
+            "name":"Đàn Guitar Acoustic Handmade E60AC (Full Solid)",
+            "price": 4200000,
+            "brand": "OEM",
+            "Origin": "Việt Nam",
+            "Material": "Gỗ nguyên tấm chất lượng cao",
+            "promotion":false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/f2/a8/83/665ab584019c24583d81bb19c907dd74.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/52/d5/85/d578ed39a65d453d96937244c201629a.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/f9/99/00/3458ed57e4451d31d07fa25fd2fb8a1a.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/bb/a6/e1/c76e71650e7e1db171b68b5c2afac4ba.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 12,
+            "type": "Guitar",
+            "name": "Đàn Guitar Acoustic E60LMT (Full solid) - Gỗ Nguyên Tấm",
+            "price": 5500000,
+            "brand": "OEM",
+            "Origin": "Việt Nam",
+            "Material": "Gỗ nguyên tấm chất lượng cao",
+            "promotion":false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/14/b6/77/fdc806a9f0a2f9ed2e9a9e646a4ecc1a.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/c9/40/dd/6035b40b0c6447514113d10762a02fb6.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/0d/63/07/5c88f13bda0fab19ae7ffea50e28eae5.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/b9/11/43/4a2b4bdbbd2a7251348f4560f21428d8.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 13,
+            "type": "Piano",
+            "name": "Đàn Piano điện cao cấp/ Home Digital Piano - Nux WK-310 (WK310) - Hàng chính hãng",
+            "price": 11900000,
+            "brand": "Nux",
+            "Origin": "Trung Quốc",
+            "Material": "Gỗ cao cấp.",
+            "promotion":false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/16/75/0f/e9d41e763fbaebfcaa2d16997a19178a.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/6f/c1/32/9ccea91f7f92b92c38a3b3d71f9c7ae1.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/b8/18/f0/51311219c1a68d2bd4bba0787050a7e8.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/b2/66/f5/d7b09116dbdd03a143629934845925b4.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 14,
+            "type": "Piano",
+            "name": "Đàn Piano điện cao cấp/ Home Digital Piano - Roland RP30 - Màu đen - Hàng chính hãng",
+            "price": 13900000,
+            "brand": "Roland",
+            "Origin": "Nhật Bản",
+            "Material": "Gỗ cao cấp.",
+            "promotion":false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/4d/17/e8/3f0c7717d6c47c00c9531f5abcfd23d3.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/6c/71/88/02937a8551c11d3d388280a868269adf.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/3b/14/d7/2b2ff99ff8e108476d6652dc51e9c038.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/98/3b/78/230c77bcbe032a881407cbc3fc2bbbfa.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 15,
+            "type": "Violin",
+            "name": "Violin Gỗ Cam 4/4 Woim 34A4-Ca",
+            "price": 1179000,
+            "brand": "Woim",
+            "Origin": "Việt Nam",
+            "Material": "Gỗ",
+            "promotion":false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/9c/1f/84/3ec5c334f6ac81707a05932b1825a354.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/85/b4/a0/2910af0847e0c6a4b4715d96916b4e23.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/d9/d6/d2/7737b7ec986257bf0726ef09dd99d3c4.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/9c/1f/84/3ec5c334f6ac81707a05932b1825a354.jpg.webp"
+            ],
+            "detail": []
+        },
+        {
+            "id": 16,
+            "type": "Violin",
+            "name": "Đàn Violin Yamaha V5SA Size 4/4 - HÀNG CHÍNH HÃNG",
+            "price": 11782000,
+            "brand": "Yamaha",
+            "Origin": "Nhật Bản",
+            "Material": "Gỗ Vân Sam",
+            "promotion":false,
+            "image": [
+                "https://salt.tikicdn.com/cache/750x750/ts/product/16/c7/bf/e1b7d205defed668d164a904be05b263.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/16/c7/bf/e1b7d205defed668d164a904be05b263.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/16/c7/bf/e1b7d205defed668d164a904be05b263.jpg.webp",
+                "https://salt.tikicdn.com/cache/750x750/ts/product/16/c7/bf/e1b7d205defed668d164a904be05b263.jpg.webp"
+            ],
+            "detail": []
+        }  
+    ]
+}

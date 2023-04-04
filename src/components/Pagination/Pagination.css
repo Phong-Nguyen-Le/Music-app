@@ -1,0 +1,17 @@
+
+.flex li a{
+  padding: 0 15px;
+  border: solid black 1px;
+  margin: 0 3px;
+  border-radius: 5px;
+}
+
+.selected>a{
+  background: #cc2121bb;
+}
+
+.paginate-container{
+  position: absolute;
+  bottom: -30px;
+
+}

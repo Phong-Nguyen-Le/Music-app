@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import DetailPage from "./pages/Home/components/Body/DetailPage/DetailPage";
+import Shop from "./pages/Shop";
+import { publicRoutes } from "./routes/routes";
+import DefaultLayout from "./components/Layout/DefaultLayout";
+import { Fragment } from "react";
+import AuthProvider from "./components/Context/AuthProvider";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <AuthProvider>
+                <div className="App">
+                    <Routes>
+                        {publicRoutes.map((route, index) => {
+                            let Layout = DefaultLayout;
+                            if (route.layout) {
+                                Layout = Fragment;
+                            }
+                            return (
+                                <Route
+                                    key={index}
+                                    path={route.path}
+                                    element={
+                                        <Layout>
+                                            <route.component />
+                                        </Layout>
+                                    }
+                                ></Route>
+                            );
+                        })}
+                    </Routes>
+                </div>
+            </AuthProvider>
+        </Router>
+    );
 }
 
 export default App;
