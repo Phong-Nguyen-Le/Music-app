@@ -87,7 +87,7 @@ export default function Login() {
                     Đăng nhập 
                 </Button>
                 <Button className="mt-6" fullWidth onClick={handleGgLogin}>
-                    Đăng nhập bằng gooble
+                    Đăng nhập bằng google
                 </Button>
                 <Button className="mt-6" fullWidth onClick={handleFbLogin}>
                     Đăng nhập bằng Facebook

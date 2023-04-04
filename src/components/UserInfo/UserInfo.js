@@ -13,16 +13,13 @@ import { AuthContext } from "../Context/AuthProvider";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import EditProfile from "../Layout/DefaultLayout/Header/EditProfile";
-import { getAuth, getRedirectResult, FacebookAuthProvider } from "firebase/auth";
 
-
+import firebase from 'firebase/compat/app';
 
 export default function UserInfo() {
 
-    console.log(auth)
-    let auth2 =  getAuth()
-    console.log(auth2)
-
+ 
+    // let auth2 =  getIdToken()
     const user = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -33,14 +30,14 @@ export default function UserInfo() {
       let signOut =  await auth.signOut()
       navigate(0)
     }
-    console.log(`user`, user)
+    
     const [openEditProfile, setOpenEditProfile] = useState(false);
     const handleOpenEditProfile = () => setOpenEditProfile(!openEditProfile);
     return (
-        <div className="mx-5 flex items-center w-[60px]">
+        <div className="mx-5 flex items-center justify-center w-[50px] sm:w-[35px]">
             {!user.email? (
               <Link to='/login'>
-                <Button>Đăng nhập</Button>
+                <Button className="sm:px-3 sm:py-1">Đăng nhập</Button>
               </Link>
             ) : (
                 <Menu>
@@ -50,6 +47,7 @@ export default function UserInfo() {
                             src={user.photoURL}
                             alt="avatar"
                             variant="circular"
+                            className="sm:w-[35px] sm:h-[35px]"
                         />
                     </MenuHandler>
                     <MenuList>

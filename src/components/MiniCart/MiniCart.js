@@ -48,11 +48,11 @@ export default function MiniCart({ openCart, handleOpenCart }) {
                 )}
             </DialogBody>
             <DialogFooter className="flex flex-col">
-                    <Link className="w-full h-full" to="/cartpage">
-                <Button className="w-full" onClick={handleOpenCart}>
+                <Link className="w-full h-full" to="/cartpage">
+                    <Button className="w-full" onClick={handleOpenCart}>
                         Xem chi tiết giỏ hàng
-                </Button>
-                    </Link>
+                    </Button>
+                </Link>
                 <Button
                     className="w-full"
                     variant="gradient"

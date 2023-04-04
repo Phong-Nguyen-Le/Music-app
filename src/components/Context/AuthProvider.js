@@ -6,11 +6,14 @@ import { createContext } from "react";
 import { useState } from "react";
 
 
+
+
 export const AuthContext = createContext()
 
 
 export default function AuthProvider({ children }) {
-    const navigate = useNavigate();
+   
+   const navigate = useNavigate();
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true)
 
@@ -18,9 +21,11 @@ export default function AuthProvider({ children }) {
       
         const unsubscribe = auth.onAuthStateChanged((user) => {
             if (user) {
+              
                 const { displayName, email, uid, photoURL } = user;
                 setUser({ displayName, email, uid, photoURL });
                 setIsLoading(false)
+               
                 navigate("/");
             } else {  
               setIsLoading(false)       

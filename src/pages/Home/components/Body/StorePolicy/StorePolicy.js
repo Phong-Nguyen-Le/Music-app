@@ -23,14 +23,14 @@ export default function StorePolicy() {
     ];
 
     return (
-        <div className=" flex justify-center items-center m-pri-marginTop">
+        <div className=" grid grid-cols-4 m-pri-marginTop sm:grid sm:grid-cols-2 sm:mt-5">
             {policyItems.map((item, index) => {
                 return (
-                    <div key={index} className="flex items-center px-5">
-                        <img className="animate-spin-slow" src={item.img}></img>
+                    <div key={index} className="flex items-center px-5 sm:px-2 sm:py-3">
+                        <img className=" sm:w-[30px]" src={item.img}></img>
                         <div className="pl-4">
-                            <h5 className=" font-medium">{item.title}</h5>
-                            <p>{item.description}</p>
+                            <h5 className="font-medium sm:text-xs">{item.title}</h5>
+                            <p className="sm:text-xs">{item.description}</p>
                         </div>
                     </div>
                 );

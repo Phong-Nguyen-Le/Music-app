@@ -1,30 +1,25 @@
-/* .slide-right, .slide-left {
-  width: 100%;
-} */
-
-/***** Slide Right *****/
-/* .slide-right {
-  animation: 3s slide-right;
+.slick-arrow.slick-prev {
+  color: black;
+  margin-left: 50px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  
 }
-@keyframes slide-right {
-  from {
-    margin-left: -100%;
-  }
-  to {
-    margin-left: 0%;
-  }
-} */
-
-/***** Slide Left *****/ 
-/* .slide-left {
-  animation: 3s slide-left;
+.slick-prev:before {
+  font-size: 40px;
+  color: gray;
 }
-@keyframes slide-left {
-  from {
-    margin-left:100%;
-  }
-  to {
-    margin-left: 0;
-  }
-} */
 
+.slick-arrow.slick-next{
+  color: black;
+  margin-right: 50px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-next::before{
+  font-size: 40px;
+  color: gray;
+}

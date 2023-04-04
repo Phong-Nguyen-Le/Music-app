@@ -13,13 +13,11 @@ import { Link } from "react-router-dom";
 export default function HeaderNavbar() {
     return (
         <>
-            <div className="">
-                <Navbar className="max-w-[1200px]">
-                    <ul className="flex justify-center items-center">
+            <div className=" flex items-center justify-center sm:h-8 sm:w-full sm:justify-start">            
                         <Link to="/">
-                            <Button className="w-[120px]" variant="gradient">
+                            <button className="w-[80px] font-header sm:w-12 sm:text-xs sm:h-8">
                                 HOME
-                            </Button>
+                            </button>
                         </Link>
                         <Typography
                             as="li"
@@ -29,12 +27,11 @@ export default function HeaderNavbar() {
                         >
                             <Menu>
                                 <MenuHandler>
-                                    <Button
-                                        className="w-[120px]"
-                                        variant="gradient"
+                                    <button
+                                        className="w-[80px] font-header sm:w-12 sm:text-xs sm:h-8"
                                     >
                                         BLOGS
-                                    </Button>
+                                    </button>
                                 </MenuHandler>
                                 <MenuList>
                                     <MenuItem>Menu Item 1</MenuItem>
@@ -44,24 +41,23 @@ export default function HeaderNavbar() {
                             </Menu>
                         </Typography>
                         <Link to='/shop'>
-                            <Button className="w-[120px]" variant="gradient">
+                            <button className="w-[80px] font-header sm:w-12 sm:text-xs sm:h-8">
                                 SHOP
-                            </Button>
+                            </button>
                         </Link>
                         <Typography
                             as="li"
                             variant="small"
                             color="blue-gray"
-                            className="p-1 font-normal"
+                            className="font-normal"
                         >
                             <Menu>
                                 <MenuHandler>
-                                    <Button
-                                        className="w-[120px]"
-                                        variant="gradient"
+                                    <button
+                                        className="w-[90px] font-header sm:w-13 sm:text-xs sm:h-8"
                                     >
                                         ABOUT US
-                                    </Button>
+                                    </button>
                                 </MenuHandler>
                                 <MenuList>
                                     <MenuItem>Menu Item 1</MenuItem>
@@ -78,12 +74,12 @@ export default function HeaderNavbar() {
                         >
                             <Menu>
                                 <MenuHandler>
-                                    <Button
-                                        className="w-[120px]"
+                                    <button
+                                        className="w-[80px] font-header sm:w-12 sm:text-xs sm:h-8"
                                         variant="gradient"
                                     >
                                         CONTACT
-                                    </Button>
+                                    </button>
                                 </MenuHandler>
                                 <MenuList>
                                     <MenuItem>Menu Item 1</MenuItem>
@@ -92,8 +88,6 @@ export default function HeaderNavbar() {
                                 </MenuList>
                             </Menu>
                         </Typography>
-                    </ul>
-                </Navbar>
             </div>
         </>
     );
