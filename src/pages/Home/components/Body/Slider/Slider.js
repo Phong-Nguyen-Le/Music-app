@@ -1,5 +1,4 @@
 import data from "../../../../../data/data.json";
-import "./Slider.css";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
