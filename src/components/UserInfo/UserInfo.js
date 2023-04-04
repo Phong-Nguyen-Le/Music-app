@@ -13,25 +13,29 @@ import { AuthContext } from "../Context/AuthProvider";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import EditProfile from "../Layout/DefaultLayout/Header/EditProfile";
+import { getAuth, getRedirectResult, FacebookAuthProvider } from "firebase/auth";
 
 
 
 export default function UserInfo() {
+
+    console.log(auth)
+    let auth2 =  getAuth()
+    console.log(auth2)
+
     const user = useContext(AuthContext);
     const navigate = useNavigate();
+
+
+
 
     const handleSignOut = async() => {
       let signOut =  await auth.signOut()
       navigate(0)
     }
-
-
-
+    console.log(`user`, user)
     const [openEditProfile, setOpenEditProfile] = useState(false);
     const handleOpenEditProfile = () => setOpenEditProfile(!openEditProfile);
-
-
-
     return (
         <div className="mx-5 flex items-center w-[60px]">
             {!user.email? (

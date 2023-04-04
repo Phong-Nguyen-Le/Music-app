@@ -6,11 +6,12 @@ import {
     Typography,
     Alert,
 } from "@material-tailwind/react";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useMemo } from "react";
 import firebase, { auth, db } from "../../firebase/config";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../components/Context/AuthProvider";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
     const navigate = useNavigate();
@@ -24,8 +25,9 @@ export default function SignUp() {
     const [loading, setLoading] = useState(false);
 
     async function handleSubmit(e) {
+       
+       
         e.preventDefault();
-
         console.log(emailRef.current.value)
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
             return setError("Passwords do not match");
@@ -110,13 +112,14 @@ export default function SignUp() {
                             color="gray"
                             className="mt-4 text-center font-normal"
                         >
-                            Đăng ký tài khoản?{" "}
-                            <a
+                            Đã có tài khoản?{" "}
+                            <Link
                                 href="#"
+                                to='/login'
                                 className="font-medium text-blue-500 transition-colors hover:text-blue-700"
                             >
-                                Đăng ký
-                            </a>
+                                Đăng nhập
+                            </Link>
                         </Typography>
                     </form>
                 </Card>

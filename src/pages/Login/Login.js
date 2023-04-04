@@ -44,7 +44,7 @@ export default function Login() {
       setError("")
       setLoading(true)
       await auth.signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
-        navigate("/")
+        // navigate("/")
     } catch {
       setError("Failed to log in")
     }
