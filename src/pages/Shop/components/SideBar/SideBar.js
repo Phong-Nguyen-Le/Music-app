@@ -2,10 +2,18 @@ import { Select, Option } from "@material-tailwind/react";
 import { Checkbox } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import data from "../../../../data/data.json";
+import {
+    Button,
+    Dialog,
+    DialogHeader,
+    DialogBody,
+    DialogFooter,
+} from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
 import { sideBarSlice } from "./sideBarSlice";
 import { useSelector } from "react-redux";
 import { brandListRemainingSelector } from "../../../../redux/selector";
+import './SideBar.css'
 
 export default function SideBar() {
 
@@ -99,10 +107,21 @@ export default function SideBar() {
         dispatch(sideBarSlice.actions.brandFilterChange(BrandArr))
     };
     
+
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(!open);
+
     
    
     return (
-        <div className="p-pri-padding">
+        <>
+        <button 
+        onClick={handleOpen}
+        className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-1 px-2 rounded-full transition duration-300 ease-in-out  hidden fixed  z-10 sm:block">
+        <i class="fa-solid fa-filter"></i>
+        </button>
+        <div className="p-pri-padding bg-white z-10 sm:hidden">
             {/* FILTER BY CATEGORIES */}
             <div>
                 <h3>Categories</h3>
@@ -165,5 +184,79 @@ export default function SideBar() {
                 </div>
             </div>
         </div>
+
+
+        <div>
+            <Dialog className=" absolute top-0 left-0 m-0 bottom-0 z-20 flex flex-col justify-start pt-10 px-3 " open={open} handler={handleOpen}>
+            <div>
+                <h3>Danh mục</h3>
+            </div>
+            <div>
+                {category.map((item) => {
+                    return (
+                        <>
+                        <p 
+                        className="py-2 text-sm"
+                        onClick={() => handeChangeTypeOfCategory(item.name)}
+                        value={item.name}
+                        >
+                            {item.name}
+                            <span className=" float-right">{item.value}</span>
+                        </p>
+                        </>
+                    );
+                })}
+            </div>
+
+            {/* FILTER BY PRICE */}
+            <div className="mt-10">
+                <h3>Lọc theo giá</h3>
+                <div>
+                    <div className="">
+                        <Select
+                            label="Mức giá"
+                            onChange={handleChangeMValue}
+                            className="w-full text-xs"
+                        >
+                            <Option value={[0,         999999]}> Dưới 1.000.000 đ</Option>
+                            <Option value={[1000000,  2000000]}>Từ 1.000.000đ đến 2.000.000đ</Option>
+                            <Option value={[2000000,  5000000]}>Từ 2.000.000đ đến 5.000.000đ</Option>
+                            <Option value={[5000000, 10000000]}>Từ 5.000.000đ đến 10.000.000đ</Option>
+                            <Option value={[10000000,Infinity]}>Trên 10.000.000đ</Option>
+                            <Option value={[0,       Infinity]}>Tất cả</Option>
+                        </Select>
+                    </div>
+
+                </div>
+            </div>
+
+            {/* FILTER BY BRAND */}
+            <div>
+                <h3>Brand</h3>
+                <div className="flex flex-col">
+                    {brandArr.map((item, index) => {
+                        return (
+                            <Checkbox
+                                key={index}
+                                id={index}
+                                label={item}
+                                checked={checkedState[index]}
+                                onChange={() =>
+                                    handleCheckedChange(index, item)
+                                }
+                            />
+                        );
+                    })}
+                </div>
+            </div>
+
+            <button           
+            onClick={handleOpen}
+          >
+            <span>Cancel</span>
+          </button>
+            </Dialog>
+        </div>
+        </>
     );
 }

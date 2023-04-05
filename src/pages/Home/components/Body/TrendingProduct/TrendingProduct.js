@@ -19,8 +19,21 @@ export default function TrendingProduct() {
     pauseOnHover:false,
     pauseOnFocus:true,
     centerPadding: "20px",
-    arrows: false
-    // className: "h-[600px]	"
+    arrows: false,
+    responsive: [
+      {
+          breakpoint: 767,
+          settings: {
+              slidesToShow: 2,
+          },
+      },
+      {
+          breakpoint: 480,
+          settings: {
+              slidesToShow: 2,
+          },
+      },
+  ],
 };
 
   return (

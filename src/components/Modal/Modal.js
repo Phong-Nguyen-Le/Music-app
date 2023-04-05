@@ -22,6 +22,23 @@ export default function Modal({open, handleOpen, product}) {
         <DialogHeader>{product.name}</DialogHeader>
         <DialogBody>
           <div>{product.price}</div>
+          <div className="flex items-center mb-4">
+              <label
+                className="mr-2 font-medium text-gray-700"
+                htmlFor="quantity"
+              >
+                Quantity:
+              </label>
+              <input
+                className="rounded-lg border-gray-400 py-2 px-3 w-16 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+                id="quantity"
+                type="number"
+                defaultValue={1}
+              />
+            </div>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-110">
+              Add to Cart
+            </button>
         </DialogBody>
         <DialogFooter>
           <Button

@@ -9,6 +9,7 @@ export default function SliderPromotion() {
     console.log(DataImages)
     const settings = {
         dots: true,
+        fade: true,
         speed: 4000,
         slidesToShow: 1,
         slidesToScroll: 1,

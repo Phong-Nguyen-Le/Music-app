@@ -18,13 +18,10 @@ import firebase from 'firebase/compat/app';
 
 export default function UserInfo() {
 
- 
+  
     // let auth2 =  getIdToken()
     const user = useContext(AuthContext);
     const navigate = useNavigate();
-
-
-
 
     const handleSignOut = async() => {
       let signOut =  await auth.signOut()
@@ -44,7 +41,7 @@ export default function UserInfo() {
                     <EditProfile open={openEditProfile} handleOpen={handleOpenEditProfile} />
                     <MenuHandler>
                         <Avatar
-                            src={user.photoURL}
+                            src={user.photoURL||`https://graph.facebook.com/2522713367877445/picture`}
                             alt="avatar"
                             variant="circular"
                             className="sm:w-[35px] sm:h-[35px]"

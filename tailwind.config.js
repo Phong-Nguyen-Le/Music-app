@@ -32,7 +32,8 @@ module.exports = withMT({
       },
       margin: {
         'pri-marginTop': '80px 0 0 0',
-        'pri-marginX': '0 15px'
+        'pri-marginX': '0 15px',
+        'pri-margin': '15px'
       },
       
     },

@@ -1,0 +1,12 @@
+.max-w-\[40\%\] {
+  max-width: none;
+}
+
+
+.min-w-\[40\%\] {
+  min-width: none;
+}
+
+.w-2\/5 {
+  width: auto;
+}

@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../components/Context/AuthProvider";
 import { Link } from "react-router-dom";
+import {createUserWithEmailAndPassword } from 'firebase/auth';
 
 export default function SignUp() {
     const navigate = useNavigate();
@@ -36,7 +37,7 @@ export default function SignUp() {
         try {
             setError("");
             setLoading(true);
-            await auth.createUserWithEmailAndPassword(
+            await createUserWithEmailAndPassword(auth,
                 emailRef.current.value,
                 passwordRef.current.value
             );

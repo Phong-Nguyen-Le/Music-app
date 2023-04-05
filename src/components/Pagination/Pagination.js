@@ -28,7 +28,7 @@ export default function Pagination({ itemsPerPage, productList }) {
 
     return (
         <>
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-3 sm:grid-cols-2">
                 {currentItems &&
                     currentItems.map((productItem, index) => (
                         <ProductCard key={index} product={{ ...productItem }} />

@@ -7,15 +7,16 @@ import {
     Alert
 } from "@material-tailwind/react";
 import React, { useRef, useState } from "react"
-import firebase,{ auth, db } from "../../firebase/config";
+import { auth } from "../../firebase/config";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../components/Context/AuthProvider";
 import { Link } from "react-router-dom";
+import { signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, signInWithEmailAndPassword } from 'firebase/auth'
 
 
-const fbProvider = new firebase.auth.FacebookAuthProvider()
-const GgProvider = new firebase.auth.GoogleAuthProvider()
+const fbProvider = new FacebookAuthProvider()
+const GgProvider = new GoogleAuthProvider()
 
 export default function Login() {
   
@@ -24,11 +25,11 @@ export default function Login() {
   const user = useContext(AuthContext)
 
   const handleFbLogin = async () => {
-       const data = await auth.signInWithPopup(fbProvider)   
+       const data = await signInWithPopup(auth,fbProvider)   
   }
 
   const handleGgLogin = async() => {
-    const data = await auth.signInWithPopup(GgProvider)
+    const data = await signInWithPopup(auth,GgProvider)
   }
   
 
@@ -43,7 +44,7 @@ export default function Login() {
     try {
       setError("")
       setLoading(true)
-      await auth.signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
+      await signInWithEmailAndPassword(auth,emailRef.current.value, passwordRef.current.value)
         // navigate("/")
     } catch {
       setError("Failed to log in")

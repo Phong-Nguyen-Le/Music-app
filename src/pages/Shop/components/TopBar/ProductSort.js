@@ -15,7 +15,7 @@ const handleSortChange = (e) => {
 } 
 
   return (
-    <div className="w-full flex items-center"> 
+    <div className="w-full flex items-center sm:justify-end"> 
       <div>Sort by</div>
       <select onChange={handleSortChange} className=" w-32 ml-3 border-solid border-2 border-slate-100">
         <option value="Relevant">Relevant</option>
