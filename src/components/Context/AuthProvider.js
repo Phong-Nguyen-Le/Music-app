@@ -4,6 +4,7 @@ import { auth } from "../../firebase/config";
 import { useEffect } from "react";
 import { createContext } from "react";
 import { useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
 
 
 
@@ -18,8 +19,7 @@ export default function AuthProvider({ children }) {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-      
-        const unsubscribe = auth.onAuthStateChanged((user) => {
+        const unsubscribe = onAuthStateChanged(auth,(user) => {
             if (user) {
               
                 const { displayName, email, uid, photoURL } = user;

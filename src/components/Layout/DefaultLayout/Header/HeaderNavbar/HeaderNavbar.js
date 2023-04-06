@@ -13,13 +13,13 @@ import { Link } from "react-router-dom";
 export default function HeaderNavbar() {
     return (
         <>
-            <div className=" flex items-center justify-center sm:h-8 sm:w-full sm:justify-start">            
+            <div className=" flex items-center justify-center sm:h-8 sm:w-full sm:justify-center">            
                         <Link to="/">
                             <button className="w-[80px] font-header sm:w-12 sm:text-xs sm:h-8">
                                 HOME
                             </button>
                         </Link>
-                        <Typography
+                        {/* <Typography
                             as="li"
                             variant="small"
                             color="blue-gray"
@@ -39,7 +39,7 @@ export default function HeaderNavbar() {
                                     <MenuItem>Menu Item 3</MenuItem>
                                 </MenuList>
                             </Menu>
-                        </Typography>
+                        </Typography> */}
                         <Link to='/shop'>
                             <button className="w-[80px] font-header sm:w-12 sm:text-xs sm:h-8">
                                 SHOP

@@ -34,6 +34,6 @@ const database = getDatabase(app)
 
 
 
-export {db, auth,database}
+export {db,auth,database}
 
 export default firebase
