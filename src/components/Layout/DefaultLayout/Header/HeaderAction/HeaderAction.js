@@ -20,26 +20,34 @@ export default function HeaderAction() {
     const handleOpenCart = () => {
         if(user.email) {
             setOpenCart(!openCart);
-        } else {setShownAlert(true)}
+            setIsDragging(true)
+        } else {setShownAlert(true)
+            setIsDragging(!isDragging)
+        }
     }
     const [shownAlert, setShownAlert] = useState(false);
     const handleShownAlert = () => {
         setShownAlert(!shownAlert)
+        setIsDragging(!isDragging)
     }
-    console.log(`showAlert`, shownAlert)
 
 
 
 
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [position, setPosition] = useState({ x: 20, y: 220 });
+    const [isDragging, setIsDragging] = useState(false);
     const buttonSize = 64; // change this value to adjust the size of the button
-  
+
+
     function handleTouchStart(event) {
-      event.preventDefault();
+        setIsDragging(true);
       const startX = event.touches[0].clientX - position.x;
       const startY = event.touches[0].clientY - position.y;
   
       function handleTouchMove(event) {
+        if (event.cancelable) {
+            event.stopImmediatePropagation();
+          }
         const screenWidth = window.innerWidth;
         const screenHeight = window.innerHeight;
         const maxX = screenWidth - buttonSize;
@@ -49,20 +57,24 @@ export default function HeaderAction() {
         let y = event.touches[0].clientY - startY;
   
         // Make sure the button doesn't move out of the screen
-        x = Math.min(Math.max(x, 0), maxX);
-        y = Math.min(Math.max(y, 0), maxY);
+        x = Math.min(Math.max(x, 10), maxX);
+        y = Math.min(Math.max(y, 10), maxY);
   
         setPosition({ x, y });
       }
   
       function handleTouchEnd() {
-        document.removeEventListener('touchmove', handleTouchMove);
-        document.removeEventListener('touchend', handleTouchEnd);
+        setIsDragging(false);
+        event.preventDefault();
+        document.removeEventListener('touchmove', handleTouchMove,  { passive: false });
+        document.removeEventListener('touchend', handleTouchEnd, { passive: false });
       }
   
       document.addEventListener('touchmove', handleTouchMove);
       document.addEventListener('touchend', handleTouchEnd);
     }
+
+    
 
 
 
@@ -94,7 +106,8 @@ export default function HeaderAction() {
 
 
             <button
-                className="hidden absolute bg-purple-600 hover:bg-purple-700 text-white font-bold py-1 px-2 rounded-full transition duration-300 ease-in-out sm:block left-0 top-[340px]"
+                className={`hidden fixed bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-3 rounded-full transition duration-300 ease-in-out sm:block left-0 top-[340px] ${
+                    isDragging ? 'opacity-100' : 'opacity-50'} transition-opacity`}
                 onClick={handleOpenCart}
                 onTouchStart={handleTouchStart}
                 variant="gradient"

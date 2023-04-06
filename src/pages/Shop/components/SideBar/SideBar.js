@@ -1,6 +1,6 @@
 import { Select, Option } from "@material-tailwind/react";
 import { Checkbox } from "@material-tailwind/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef  } from "react";
 import data from "../../../../data/data.json";
 import {
     Button,
@@ -105,14 +105,68 @@ export default function SideBar() {
         dispatch(sideBarSlice.actions.brandFilterChange(BrandArr));
     };
 
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(!open);
+
+    const [openFilter, setOpenFilter] = useState(false);
+    const handleOpenFilter = () => {
+        setOpenFilter(!openFilter)
+        setIsDragging(!isDragging)
+    };
+
+
+
+
+    // filter button on phone display setting 
+    const [position, setPosition] = useState({ x: 20, y: 180 });
+    const [isDragging, setIsDragging] = useState(false);
+    const buttonSize = 64; // change this value to adjust the size of the button
+        console.log(position)
+    function handleTouchStart(event) {
+        setIsDragging(true);
+      const startX = event.touches[0].clientX - position.x;
+      const startY = event.touches[0].clientY - position.y;
+  
+      function handleTouchMove(event) {
+        if (event.cancelable) {
+            event.stopImmediatePropagation();
+          }
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const maxX = screenWidth - buttonSize;
+        const maxY = screenHeight - buttonSize;
+  
+        let x = event.touches[0].clientX - startX;
+        let y = event.touches[0].clientY - startY;
+  
+        // Make sure the button doesn't move out of the screen
+        x = Math.min(Math.max(x, 10), maxX);
+        y = Math.min(Math.max(y, 10), maxY);
+  
+        setPosition({ x, y });
+      }
+  
+      function handleTouchEnd() {
+        setIsDragging(false);
+        event.preventDefault();
+        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener('touchend', handleTouchEnd);
+      }
+  
+      document.addEventListener('touchmove', handleTouchMove);
+      document.addEventListener('touchend', handleTouchEnd);
+    }
+
+
+
 
     return (
         <>
+            {/* The filter button display on phone screen */}
             <button
-                onClick={handleOpen}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-1 px-2 rounded-full transition duration-300 ease-in-out hidden fixed  z-10 sm:block"
+                onClick={handleOpenFilter}
+                onTouchStart={handleTouchStart}
+                style={{left: `${position.x}px`, top: `${position.y}px` }}
+                className={`bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-3 rounded-full transition duration-300 ease-in-out hidden fixed  z-30 sm:block ${
+                    isDragging ? 'opacity-100' : 'opacity-50'} transition-opacity`}
             >
                 <i class="fa-solid fa-filter"></i>
             </button>
@@ -201,8 +255,8 @@ export default function SideBar() {
             <div>
                 <Dialog
                     className=" absolute top-0 left-0 m-0 bottom-0 z-20 flex flex-col justify-start pt-10 px-3 "
-                    open={open}
-                    handler={handleOpen}
+                    open={openFilter}
+                    handler={handleOpenFilter}
                 >
                     <div>
                         <h3>Danh mục</h3>
@@ -282,7 +336,7 @@ export default function SideBar() {
                         </div>
                     </div>
 
-                    <button onClick={handleOpen}>
+                    <button onClick={handleOpenFilter}>
                         <span>Cancel</span>
                     </button>
                 </Dialog>
