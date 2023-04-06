@@ -32,15 +32,26 @@ export default function HeaderAction() {
 
 
     const [position, setPosition] = useState({ x: 0, y: 0 });
-
+    const buttonSize = 64; // change this value to adjust the size of the button
+  
     function handleTouchStart(event) {
       event.preventDefault();
       const startX = event.touches[0].clientX - position.x;
       const startY = event.touches[0].clientY - position.y;
   
       function handleTouchMove(event) {
-        const x = event.touches[0].clientX - startX;
-        const y = event.touches[0].clientY - startY;
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const maxX = screenWidth - buttonSize;
+        const maxY = screenHeight - buttonSize;
+  
+        let x = event.touches[0].clientX - startX;
+        let y = event.touches[0].clientY - startY;
+  
+        // Make sure the button doesn't move out of the screen
+        x = Math.min(Math.max(x, 0), maxX);
+        y = Math.min(Math.max(y, 0), maxY);
+  
         setPosition({ x, y });
       }
   
@@ -87,7 +98,7 @@ export default function HeaderAction() {
                 onClick={handleOpenCart}
                 onTouchStart={handleTouchStart}
                 variant="gradient"
-                style={{ top: position.y + 'px', left: position.x + 'px' }}
+                style={{ top: position.y + 'px', left: position.x + 'px',  zIndex: 999}}
             >
                 <i className="fa-solid fa-cart-shopping"></i>
             </button>
