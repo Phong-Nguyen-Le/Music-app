@@ -7,12 +7,13 @@ import {
     Alert,
 } from "@material-tailwind/react";
 import React, { useRef, useState, useMemo } from "react";
-import firebase, { auth, db } from "../../firebase/config";
+import { auth} from "../../firebase/config";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../components/Context/AuthProvider";
 import { Link } from "react-router-dom";
-import {createUserWithEmailAndPassword } from 'firebase/auth';
+import {createUserWithEmailAndPassword,onAuthStateChanged } from 'firebase/auth';
+import displayMsg from "../../components/Toastify";
 
 export default function SignUp() {
     const navigate = useNavigate();
@@ -26,8 +27,6 @@ export default function SignUp() {
     const [loading, setLoading] = useState(false);
 
     async function handleSubmit(e) {
-       
-       
         e.preventDefault();
         console.log(emailRef.current.value)
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -41,24 +40,26 @@ export default function SignUp() {
                 emailRef.current.value,
                 passwordRef.current.value
             );
-            navigate("/login");
-        } catch {
+            // displayMsg('Đăng ký thành công', true, 3000)
+            
+            
+            } catch {
             setError("Failed to create an account");
-        }
+            }
 
         setLoading(false);
     }
 
     return (
         <>
-            <div className="h-screen flex justify-center mt-[200px]">
+            <div className="h-screen flex justify-center items-center">
                 <Card color="transparent" shadow={false}>
-                    <Typography variant="h4" color="blue-gray">
+                    <Typography variant="h4" color="blue-gray" className="text-center">
                         Đăng ký
                     </Typography>
                     {error && <Alert color="red">{error}</Alert>}
                     <form
-                        className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+                        className="mt-8  w-80 mb-2 max-w-screen-lg "
                         onSubmit={handleSubmit}
                     >
                         <div className="mb-4 flex flex-col gap-6">

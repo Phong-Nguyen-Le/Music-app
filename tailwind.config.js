@@ -26,6 +26,7 @@ module.exports = withMT({
       },
       colors: {
         'red-1': '#CC2121',
+        'gray-1': '#eaeaea'
       },
       padding: {
         'pri-padding':  '0 15px'

@@ -45,7 +45,7 @@ export default function Login() {
       setError("")
       setLoading(true)
       await signInWithEmailAndPassword(auth,emailRef.current.value, passwordRef.current.value)
-        // navigate("/")
+     
     } catch {
       setError("Failed to log in")
     }
@@ -55,13 +55,13 @@ export default function Login() {
 
     return (
       <>
-        {!user.email?(<div className="h-screen flex justify-center mt-[200px]">
-        <Card color="transparent" shadow={false}>
-            <Typography variant="h4" color="blue-gray">
+        {!user.email?(<div className="h-screen flex justify-center items-center ">
+        <Card color="transparent" className="" shadow={false}>
+            <Typography variant="h4" color="blue-gray" className="text-center">
                 Đăng nhập
             </Typography>
             {error && <Alert color="red">{error}</Alert>}
-            <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96" onSubmit={handleSubmit}>
+            <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-[100%]" onSubmit={handleSubmit}>
                 <div className="mb-4 flex flex-col gap-6">
                     <Input size="lg" label="Email" inputRef={emailRef}/>
                     <Input type="password" size="lg" label="Password" inputRef={passwordRef}/>
@@ -87,12 +87,21 @@ export default function Login() {
                 <Button disabled={loading} className="mt-6" fullWidth type="submit">
                     Đăng nhập 
                 </Button>
-                <Button className="mt-6" fullWidth onClick={handleGgLogin}>
-                    Đăng nhập bằng google
-                </Button>
-                <Button className="mt-6" fullWidth onClick={handleFbLogin}>
-                    Đăng nhập bằng Facebook
-                </Button>
+                
+                <div className="mt-8">
+                    <p className="text-center">Đăng nhập bằng tài khoản của:</p>
+                    <div className="grid grid-cols-2">
+
+                <button className="" fullWidth onClick={handleGgLogin}>
+                <i className="fa-brands fa-google text-3xl"></i>
+                </button>
+                <button className="" fullWidth onClick={handleFbLogin}>
+                <i className="fa-brands fa-facebook text-3xl"></i>
+                </button>
+                    </div>
+                </div>
+
+
                 <Button className="mt-6" fullWidth onClick={() => navigate('/')}>
                     Để sau
                 </Button>

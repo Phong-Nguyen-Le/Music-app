@@ -10,6 +10,7 @@ export default function StoreProduct() {
 
   return (
     <div>
+      
       <h2 className='text-3xl text-center m-pri-marginTop sm:text-lg'>New Products</h2>
       <p className='text-lg text-center py-2 mb-10 sm:text-base'>Accumsan vitae pede lacus ut ullamcorper sollicitudin quisque libero</p>
       <div className="grid grid-cols-4 sm:grid-cols-2">

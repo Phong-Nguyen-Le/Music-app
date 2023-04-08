@@ -21,11 +21,9 @@ export default function AuthProvider({ children }) {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth,(user) => {
             if (user) {
-              
                 const { displayName, email, uid, photoURL } = user;
                 setUser({ displayName, email, uid, photoURL });
                 setIsLoading(false)
-               
                 navigate("/");
             } else {  
               setIsLoading(false)       

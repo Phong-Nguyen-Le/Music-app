@@ -5,18 +5,17 @@ import {
     Route,
     Navigate,
 } from "react-router-dom";
-import Home from "./pages/Home";
-import DetailPage from "./pages/Home/components/Body/DetailPage/DetailPage";
-import Shop from "./pages/Shop";
 import { publicRoutes, privateRoutes } from "./routes/routes";
 import DefaultLayout from "./components/Layout/DefaultLayout";
 import { Fragment } from "react";
 import AuthProvider from "./components/Context/AuthProvider";
 import { PrivateRoute } from "./routes/routes";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
     return (
         <Router>
+            <ToastContainer />
             <AuthProvider>
                 <div className="App">
                     <Routes>

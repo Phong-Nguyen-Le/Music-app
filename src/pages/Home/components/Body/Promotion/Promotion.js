@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Promotion.css";
+import CountdownTimer from "../../../../../components/CountdownTimer";
 
 export default function Promotion() {
     const productList = Data.product.slice(0, 8);
@@ -71,46 +72,15 @@ export default function Promotion() {
                                             4.000.000
                                         </span>
                                     </div>
+
+                                    
                                     <p>
                                         <strong className="text-red-600">
                                             Hurry up!
                                         </strong>{" "}
                                         Ofter ends in
                                     </p>
-                                    <div className="flex items-center">
-                                        <div className="flex flex-col justify-center mx-2 items-center w-12 h-12 bg-red-600 text-white rounded-lg">
-                                            <span className="leading-4">
-                                                00
-                                            </span>
-                                            <span className="leading-4">
-                                                Days
-                                            </span>
-                                        </div>
-                                        <div className="flex flex-col justify-center mx-2 items-center w-12 h-12 bg-red-600 text-white rounded-lg">
-                                            <span className="leading-4">
-                                                00
-                                            </span>
-                                            <span className="leading-4">
-                                                Hours
-                                            </span>
-                                        </div>
-                                        <div className="flex flex-col justify-center mx-2 items-center w-12 h-12 bg-red-600 text-white rounded-lg">
-                                            <span className="leading-4">
-                                                00
-                                            </span>
-                                            <span className="leading-4">
-                                                Mins
-                                            </span>
-                                        </div>
-                                        <div className="flex flex-col justify-center mx-2 items-center w-12 h-12 bg-red-600 text-white rounded-lg">
-                                            <span className="leading-4">
-                                                00
-                                            </span>
-                                            <span className="leading-4">
-                                                Secs
-                                            </span>
-                                        </div>
-                                    </div>
+                                    <CountdownTimer targetDate={new Date('2023-04-10T00:00:00')}/>
                                 </div>
                             </div>
                         </div>
