@@ -35,7 +35,8 @@ export default function ProductCard({ product }) {
             };
             if (!cart.some((item) => item.name === productInfo.name)) {
                 dispatch(cartSlice.actions.addProductToCart(productInfo));
-            }
+                displayMsg('Sản phẩm đã được thêm vào giỏ hàng', true , 1000)
+            } else { displayMsg('Sản phẩm đã có trong giỏ hàng', true , 1000)}
         } else {
             displayMsg('!!!Bạn phải đăng nhập để sử dụng giỏ hàng!', false , 3000)
            

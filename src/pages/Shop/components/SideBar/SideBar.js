@@ -41,7 +41,7 @@ export default function SideBar() {
             });
         }
         totalProductByTypeArr.unshift({
-            name: "All",
+            name: "Tất cả",
             value: productList.length,
         });
         setCategory(totalProductByTypeArr);
@@ -106,13 +106,14 @@ export default function SideBar() {
     };
 
 
+
+
+
     const [openFilter, setOpenFilter] = useState(false);
     const handleOpenFilter = () => {
         setOpenFilter(!openFilter)
         setIsDragging(!isDragging)
     };
-
-
 
 
     // filter button on phone display setting 
@@ -177,14 +178,14 @@ export default function SideBar() {
             <div className="p-pri-padding bg-white z-10 sm:hidden">
                 {/* FILTER BY CATEGORIES */}
                 <div>
-                    <h3>Categories</h3>
+                    <h3 className="font-bold">Danh mục</h3>
                 </div>
                 <div>
                     {category.map((item) => {
                         return (
                             <>
                                 <p
-                                    className="py-2 text-sm"
+                                    className="py-2 text-base cursor-pointer text-[#616161] sm:text-base"
                                     onClick={() =>
                                         handeChangeTypeOfCategory(item.name)
                                     }
@@ -202,9 +203,9 @@ export default function SideBar() {
 
                 {/* FILTER BY PRICE */}
                 <div className="mt-10">
-                    <h3>Price</h3>
+                    <h3 className=" font-bold">Mức giá</h3>
                     <div>
-                        <div className="w-72">
+                        <div className="w-72 mt-2">
                             <Select
                                 label="Mức giá"
                                 onChange={handleChangeMValue}
@@ -231,13 +232,15 @@ export default function SideBar() {
                     </div>
                 </div>
 
+
                 {/* FILTER BY BRAND */}
-                <div>
-                    <h3>Brand</h3>
+                <div className="mt-10">
+                    <h3 className=" font-bold">Thương hiệu</h3>
                     <div className="flex flex-col">
                         {brandArr.map((item, index) => {
                             return (
                                 <Checkbox
+                                    className="sm:font-sm"
                                     key={index}
                                     id={index}
                                     label={item}
@@ -254,19 +257,19 @@ export default function SideBar() {
 
             <div>
                 <Dialog
-                    className=" absolute top-0 left-0 m-0 bottom-0 z-20 flex flex-col justify-start pt-10 px-3 "
+                    className=" absolute top-0 left-0 m-0 bottom-0 z-20 flex flex-col justify-start pt-2 px-3 "
                     open={openFilter}
                     handler={handleOpenFilter}
                 >
                     <div>
-                        <h3>Danh mục</h3>
+                        <h3 className="font-bold">Danh mục</h3>
                     </div>
                     <div>
                         {category.map((item) => {
                             return (
                                 <>
                                     <p
-                                        className="py-2 text-sm"
+                                        className="py-1 text-base text-black"
                                         onClick={() =>
                                             handeChangeTypeOfCategory(item.name)
                                         }
@@ -283,7 +286,7 @@ export default function SideBar() {
                     </div>
 
                     {/* FILTER BY PRICE */}
-                    <div className="mt-10">
+                    <div className="pt-2">
                         <h3>Lọc theo giá</h3>
                         <div>
                             <div className="">
@@ -318,11 +321,12 @@ export default function SideBar() {
 
                     {/* FILTER BY BRAND */}
                     <div>
-                        <h3>Brand</h3>
+                        <h3>Thương hiệu</h3>
                         <div className="flex flex-col">
                             {brandArr.map((item, index) => {
                                 return (
                                     <Checkbox
+                                        className=""
                                         key={index}
                                         id={index}
                                         label={item}

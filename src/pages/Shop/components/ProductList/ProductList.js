@@ -26,7 +26,7 @@ export default function ProductList() {
 
     return (
         <div className="min-h-[600px] relative">
-            <div className="h-[100px]">
+            <div className="h-[50px]">
                 <TopBar />
             </div>
             <div>

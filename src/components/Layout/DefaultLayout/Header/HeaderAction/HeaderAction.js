@@ -4,11 +4,9 @@ import {
 } from "@material-tailwind/react";
 import MiniCart from "../../../../MiniCart/MiniCart";
 import UserInfo from "../../../../UserInfo/UserInfo";
-
 import { AuthContext } from "../../../../Context/AuthProvider";
 import Alert from "../../../../Alert/Alert";
-import MoveableButton from "../../../../MoveButton";
-
+import displayMsg from "../../../../Toastify";
 
 
 export default function HeaderAction() {
@@ -21,13 +19,13 @@ export default function HeaderAction() {
         if(user.email) {
             setOpenCart(!openCart);
             setIsDragging(true)
-        } else {setShownAlert(true)
+        } else {
+            displayMsg('!!!Bạn phải đăng nhập để sử dụng giỏ hàng!', false , 3000)
             setIsDragging(!isDragging)
         }
     }
     const [shownAlert, setShownAlert] = useState(false);
     const handleShownAlert = () => {
-        setShownAlert(!shownAlert)
         setIsDragging(!isDragging)
     }
 
@@ -99,7 +97,7 @@ export default function HeaderAction() {
                     />
                 </Fragment>
 
-               {shownAlert&& <Alert handleShown={handleShownAlert}/>}
+               {shownAlert&&<Alert handleShown={handleShownAlert}/>}
             </div>
             
             {/* <MoveableButton /> */}

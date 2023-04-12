@@ -26,7 +26,7 @@ export default function EditProfile({ open, handleOpen }) {
     const handleSubmit = () => {
       let usernow =firebase.auth().currentUser
       usernow.updateProfile({
-        displayName: nameRef.current.value,
+        displayName:nameRef.current.value,
         photoURL:photoRef.current.value
     })
         navigate(0) 
@@ -41,7 +41,7 @@ export default function EditProfile({ open, handleOpen }) {
                         <div className="mb-4 flex flex-col gap-6">
                             <p>{displayName}</p>
                             <Input size="lg" label="Tên" inputRef={nameRef}/>
-                            <Input size="lg" label="Email" inputRef={photoRef}/>
+                            <Input size="lg" label="Điền URL hình ảnh" inputRef={photoRef}/>
                         </div>
                     </DialogBody>
                     <DialogFooter>

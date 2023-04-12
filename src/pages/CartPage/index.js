@@ -8,7 +8,7 @@ export default function CartPage() {
           <div className="h-[200px] text-center leading-[200px] bg-[#f6f6f6]">
               Cart
           </div>
-          <div className="max-w-[1200px] min-h-[300px] mx-auto m-pri-marginTop">
+          <div className="max-w-[1200px] min-h-[300px] mx-auto m-pri-marginTop sm:mt-5">
              <DetailCart />
              <TotalCart />
           </div>

@@ -9,7 +9,7 @@ export default function DetailCart() {
     const cart = useSelector(cartSelector)[0];
 
     console.log(cart);
-    const boderStyle = "border-solid border-2 border-[#494a4b6c]";
+    const boderStyle = "border-solid border-2 border-[#494a4b6c] sm:text-xs";
 
     const handleDecreaseItem = (quantity, nameItem) => {
         if (quantity > 1) {
@@ -69,7 +69,7 @@ export default function DetailCart() {
                                 <td className={`${boderStyle}`}>{formatNumberFunc(price)}</td>
                                 <td className={`${boderStyle}`}>
                                     <div
-                                        className={`${boderStyle} w-[60%] mx-auto`}
+                                        className={`${boderStyle} w-[60%] mx-auto sm:flex sm:flex-col sm:items-center`}
                                     >
                                         <button
                                             onClick={() =>

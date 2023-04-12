@@ -1,6 +1,7 @@
 import ProductCard from "../../../../../components/ProductCard/ProductCard"
 import { Button } from "@material-tailwind/react";
 import Data from '../../../../../data/data.json'
+import { Link } from "react-router-dom";
 
 
 export default function StoreProduct() {
@@ -20,8 +21,11 @@ export default function StoreProduct() {
           )
         })}        
         </div>
+
         <div className="flex justify-center my-5">
+            <Link to='/shop'>
            <Button>View More Product</Button>
+            </Link>
         </div>
     </div>
 

@@ -80,7 +80,7 @@ export default function Promotion() {
                                         </strong>{" "}
                                         Ofter ends in
                                     </p>
-                                    <CountdownTimer targetDate={new Date('2023-04-10T00:00:00')}/>
+                                    <CountdownTimer targetDate={new Date('2023-04-30T00:00:00')}/>
                                 </div>
                             </div>
                         </div>

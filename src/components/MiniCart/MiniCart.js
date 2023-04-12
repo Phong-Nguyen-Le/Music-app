@@ -18,12 +18,12 @@ export default function MiniCart({ openCart, handleOpenCart }) {
 
     return (
         <Dialog
-            className="max-w-[380px] min-w-0 h-screen p-0 m-0 absolute right-0 "
+            className="max-w-[380px] min-w-0 h-screen p-0 m-0 absolute right-0  max-h-screen overflow-y-scroll"
             open={openCart}
             handler={handleOpenCart}
         >
             <DialogHeader>Giỏ hàng</DialogHeader>
-            <DialogBody divider>
+            <DialogBody divider className="">
                 {cart.length == 0 ? (
                     <div className="text-center">
                         Chưa có sản phẩm nào trong giỏ hàng
@@ -49,6 +49,7 @@ export default function MiniCart({ openCart, handleOpenCart }) {
                         );
                     })
                 )}
+                
             </DialogBody>
            
 

@@ -10,8 +10,8 @@ export default function TotalCart () {
 
   return (
     <div className="flex justify-end">
-    {totalCart !== 0? ( <div className=" w-[500px] mt-10 px-3">
-      <h3 className="pb-3 text-center text-xl font-bold border-solid border-b-2 border-[#494a4b6c]">Thông tin thanh toán</h3>
+    {totalCart !== 0? ( <div className=" w-[500px] mt-10 px-3 sm:text-xs">
+      <h3 className="pb-3 text-center text-xl font-bold border-solid border-b-2 border-[#494a4b6c] sm:text-sm">Thông tin thanh toán</h3>
       <div className="flex justify-between py-3 border-solid border-b-2 border-[#494a4b6c]">
         <span className="">Tổng số tiền</span>
         <span className="">{formatNumberFunc(totalCart)}</span>
@@ -28,7 +28,7 @@ export default function TotalCart () {
         <span>Số tiền thanh toán</span>
         <span>{formatNumberFunc(totalCart)}</span>
       </div>
-      <Button className="w-full text-base">Tiến hành thanh toán</Button>
+      <Button className="w-full text-base sm:text-xs">Tiến hành thanh toán</Button>
     </div>): <></>}
     </div>
   )

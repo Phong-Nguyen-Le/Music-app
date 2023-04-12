@@ -14,7 +14,6 @@ import { useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cartSlice } from "../../pages/CartPage/CartSlice";
 import { cartSelector } from "../../redux/selector";
-import displayMsg from "../Toastify";
 import { Alert } from "@material-tailwind/react";
 
 export default function Modal({ open, handleOpen, product }) {
@@ -102,19 +101,19 @@ export default function Modal({ open, handleOpen, product }) {
                                 Thời gian khyến mãi còn:
                             </p>
                             <CountdownTimer
-                                targetDate={new Date("2023-04-10T00:00:00")}
+                                targetDate={new Date("2023-04-30T00:00:00")}
                             />
                         </div>
 
                         {/* Mô tả nội dung sản phẩm */}
-                        <div>
+                        {/* <div>
                             <p className="sm:text-sm">
                                 Lorem ipsum dolor sit amet, consetetur
                                 sadipscing elitr, sed diam nonumy eirmod tempor
                                 invidunt ut labore et dolore magna aliquyam
                                 erat.
                             </p>
-                        </div>
+                        </div> */}
 
                         <div className="flex items-center mb-4">
                             <label
